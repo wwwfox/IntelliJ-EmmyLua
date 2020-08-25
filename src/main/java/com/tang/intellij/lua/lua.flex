@@ -104,6 +104,7 @@ LONG_STRING=\[=*\[[\s\S]*\]=*\]
         if (block) { yypushback(yylength()); yybegin(xBLOCK_COMMENT); }
         else { yypushback(yylength()); yybegin(xCOMMENT); }
    }
+  "cc.exports."               { return DUMMY_GLOBAL; }
   "and"                       { return AND; }
   "break"                     { return BREAK; }
   "do"                        { return DO; }
